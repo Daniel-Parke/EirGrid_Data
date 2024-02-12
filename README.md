@@ -26,14 +26,14 @@ Downloading all datasets (excluding frequency) can take up to **30 minutes** due
 
 
 ### Data Categories available:
-"demandactual" - Energy demand at timestamp
-"generationactual" - Energy generation at timestamp
-"windactual" - Wind energy generation at timestamp
-"interconnection" - Energy supplied through grid interconnectors
-"co2intensity" - Grid CO2 intensity of energy consumed at timestamp
-"co2emission" - Total CO2 emissions produced by grid at timestamp
-"SnspALL" - System Non-Synchronous Penetration at timestamp
-"frequency" - Frequency of electrical grid measured at timestamp
+- **"demandactual"**: Energy demand at timestamp
+- **"generationactual"**: Energy generation at timestamp
+- **"windactual"**: Wind energy generation at timestamp
+- **"interconnection"**: Energy supplied through grid interconnectors
+- **"co2intensity"**: Grid CO2 intensity of energy consumed at timestamp
+- **"co2emission"**: Total CO2 emissions produced by grid at timestamp
+- **"SnspALL"**: System Non-Synchronous Penetration at timestamp
+- **"frequency"**: Frequency of electrical grid measured at timestamp
 
 ### Requirements
 Ensure the following packages are installed on your system:
