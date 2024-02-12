@@ -33,7 +33,7 @@ Ensure the following packages are installed on your system:
 - backoff
 - aiofiles
 
-## Install through command line interface:
+**Install through command line interface:**
     ```python
     pip install pandas
     pip install requests
@@ -43,7 +43,7 @@ Ensure the following packages are installed on your system:
     pip install aiofiles
     ```
     
-## Libraries used within the Eirgrid data downloader:
+**Libraries used within the Eirgrid data downloader:**
     ```python
     from timeit import default_timer as timer
     import os.path
