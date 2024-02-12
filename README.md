@@ -1,6 +1,6 @@
 # Python-Files
 ## General use guidelines:
-This program was enabled to download all data available on the Eirgrid server that is presented on the Eirgrid Smart Dashboard (**https://www.smartgriddashboard.com/#all/demand**)
+This program was enabled to download all data available on the Eirgrid server that is presented on the Eirgrid Smart Dashboard (**https://www.smartgriddashboard.com/#all/demand**). This information encompasses all grid variables recorded by the Network operator within the iSEM for both Northern Ireland, and the Republic of Ireland.
 
 ### How to run.
 To download the data simply run the python file titled **"async_eirgrid_datadownload.py file"** on the command line. This will generate and save a CSV file with the historical Eirgrid SEMO energy grid data into the downloaded folder. This will be done for each category and region set as variables within the .py file.
