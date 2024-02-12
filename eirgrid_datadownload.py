@@ -104,6 +104,10 @@ def get_historic_data(region="ALL"):
             # Merge dataframe lists and save data to CSV file.
             final = pd.concat(frames)
 
+            # Ensure the directory exists
+            csv_dir = os.path.join("Downloaded_Data", region)
+            os.makedirs(csv_dir, exist_ok=True)  # Create directory if it does not exist
+
             final.to_csv(
                 os.path.join(
                     f"Downloaded_Data/{region}",

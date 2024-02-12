@@ -1,8 +1,15 @@
 # Python-Files
 ## General use guidelines:
-There are a few basic requirements before running the program to ensure it works correctly. If you are not using an IDE like Jupyter or VScode, then remember to install python 3.9 or higher first before running the .py file.
+This program was enabled to download all data available on the Eirgrid server that is presented on the Eirgrid Smart Dashboard (**https://www.smartgriddashboard.com/#all/demand**)
 
-There are three .py files that can be run to access the Eirgrid data. The python file "async_eirgrid_datadownload.py" is the current main method I use myself. "parrallel_async_eirgrid_datadownload.py" was a test to see if parrallel processing would improve processing time but it made little difference. The "eirgrid_datadownload.py" file was the first implementation of this program and has the same functionality, but is a lot slower to download all the data as it processes each API call consecutively.
+### How to run.
+To download the data simply run the python file titled **"async_eirgrid_datadownload.py file"** on the command line. This will generate and save a CSV file with the historical Eirgrid SEMO energy grid data into the downloaded folder. This will be done for each category and region set as variables within the .py file.
+
+### More information.
+
+There are a few basic requirements before running the program to ensure it works correctly. If you are not using an IDE like Jupyter or VScode, then remember to install python 3.9 or higher first before running the .py file. Simply run the .py file in your terminal to start the process, assuming you meet the requirements listed at the bottom. 
+
+There are three .py files that can be run to download the Eirgrid data. The python file "async_eirgrid_datadownload.py" is the current main method I use myself. "parrallel_async_eirgrid_datadownload.py" was a test to see if parrallel processing would improve processing time but it made little difference. The "eirgrid_datadownload.py" file was the first implementation of this program and has the same functionality, but is a lot slower to download all the data as it processes each API call consecutively.
 
 Most datasets contain information from 1st January 2014 onwards, however SNSP data is only available from after 2022 as it was not recorded before this. The time series format for the data ranges from 5 seconds to 30 minutes depending on the dataset obtained, however most use a 15 minute format. More information on the data categories and formats can be found at **"https://www.smartgriddashboard.com/#all"**
 
@@ -20,30 +27,25 @@ If the **"frequency"** dataset is not required, then simply delete "frequency" f
 
 A copy of the frequency data can also be provided, please get in touch if you would like this.
 
-### First Requirement.
-Make sure that there is a folder titled **"Downloaded_Data"** located within the same directory as the **"async_eirgrid_datadownload.py file"** or whichever .py file you intend to run. Within the **"Downloaded_Data"** folder, also make sure there are seperate folders titled "NI", "ROI", and "ALL" respectively. This is where the generated CSV files will be saved.
 
-### Second Requirement.
+### Requirements.
 Make sure that the packages listed at the bottom of the page are installed on your system, and import using the provided code below.
 
-
-### How to run.
-Now to collect the data simply run the python file titled **"async_eirgrid_datadownload.py file"** on the command line. This will generate and save a CSV file with the historical Eirgrid SEMO energy grid data into the downloaded folder. This will be done for each category and region set as variables within the .py file.
-
-
 ## Install through command line interface:
-
     pip install pandas
     pip install requests
     pip install httpx
     pip install httpx[http2]
     pip install backoff
     pip install aiofiles
-
     
 ## Libraries used within the Eirgrid data downloader:
-
     from timeit import default_timer as timer
     import os.path
+    import os
+    import asyncio
     import requests
+    import httpx
+    from backoff import on_exception, expo, HTTPStatusError
+    from tqdm.asyncio import tqdm
     import pandas as pd
