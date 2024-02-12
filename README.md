@@ -20,9 +20,20 @@ The current program will download all data from the earliest range possible up u
 
 Note that **SNSP** data is **NOT** broken down into regions and is only available on an all-island basis. This program will generate **Snsp.csv** files for "NI" and "ROI"; however, these will not be populated with data and should be ignored. The original dataset included in this repo has had these files deleted from the "NI" and "ROI" folders already.
 
-A copy of the datasets the .py file will collect can be found within the **"Downloaded_Data"** folder, including data from 2014-2023. Due to the size, a copy of the "frequency" data is **NOT** available in the GitHub repo. If you would like a copy of this for the period 2014-2023, please get in touch.
+A copy of the datasets the .py file will collect can be found within the **"Downloaded_Data"** folder, including data from 2014-2023. Due to the size, a copy of the "frequency" data is **NOT** available in the GitHub repo. If you would like a copy of this for the period 2014-2023, please get in touch. If you would like to include frequency data in your download function, then simply add this to the categories defined in the function using the string naming convention shown below **("frequency")**.
 
-Downloading all datasets (excluding frequency) can take up to **30 minutes** due to the large size of the dataset. Using the async version of the program reduces this time to around **11 minutes**, and further to **2.21 minutes** with the parallel version.
+Downloading all datasets (excluding frequency) can take up to **30 minutes** due to the large size of the dataset. Using the async version of the program reduces this time to around **11 minutes**, with the parallel version reducing times even further depending on your system.
+
+
+### Data Categories available:
+"demandactual" - Energy demand at timestamp
+"generationactual" - Energy generation at timestamp
+"windactual" - Wind energy generation at timestamp
+"interconnection" - Energy supplied through grid interconnectors
+"co2intensity" - Grid CO2 intensity of energy consumed at timestamp
+"co2emission" - Total CO2 emissions produced by grid at timestamp
+"SnspALL" - System Non-Synchronous Penetration at timestamp
+"frequency" - Frequency of electrical grid measured at timestamp
 
 ### Requirements
 Ensure the following packages are installed on your system:
