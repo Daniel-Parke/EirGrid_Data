@@ -34,25 +34,25 @@ Ensure the following packages are installed on your system:
 - aiofiles
 
 **Install through command line interface:**
-    ```python
-    pip install pandas
-    pip install requests
-    pip install httpx
-    pip install httpx[http2]
-    pip install backoff
-    pip install aiofiles
-    ```
+```python
+pip install pandas
+pip install requests
+pip install httpx
+pip install httpx[http2]
+pip install backoff
+pip install aiofiles
+```
     
 **Libraries used within the Eirgrid data downloader:**
-    ```python
-    from timeit import default_timer as timer
-    import os.path
-    import os
-    import asyncio
-    import requests
-    import httpx
-    from backoff import on_exception, expo, HTTPStatusError
-    from tqdm.asyncio import tqdm
-    import pandas as pd
-    ```
+```python
+from timeit import default_timer as timer
+import os.path
+import os
+import asyncio
+import requests
+import httpx
+from backoff import on_exception, expo, HTTPStatusError
+from tqdm.asyncio import tqdm
+import pandas as pd
+```
 
