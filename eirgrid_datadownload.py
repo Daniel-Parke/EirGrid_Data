@@ -1,3 +1,4 @@
+# Runtime of program without collecting frequency data was  1833.58 seconds / 30.56 minutes.
 from timeit import default_timer as timer
 import os
 import requests
