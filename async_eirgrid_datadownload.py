@@ -1,4 +1,4 @@
-# Runtime of program without collecting frequency data was 611.29 seconds / 10.2 minutes.
+# Runtime of program without collecting frequency data was 672.29 seconds / 11.2 minutes.
 from timeit import default_timer as timer
 import asyncio
 import os
@@ -25,9 +25,9 @@ async def main():
         await asyncio.gather(*tasks)
 
 @on_exception(expo, HTTPStatusError, max_tries=8)
-async def fetch_data(client, api):
+async def fetch_data(client, api, timeout=25):
     try:
-        response = await client.get(api)
+        response = await client.get(api, timeout=timeout)
         response.raise_for_status()
         return response.json()["Rows"]
     except HTTPStatusError as e:
