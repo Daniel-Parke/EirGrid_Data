@@ -4,16 +4,16 @@
 This script is designed to download all available data on the Eirgrid server presented on the [Eirgrid Smart Dashboard](https://www.smartgriddashboard.com/#all/demand). This information encompasses all grid variables recorded by the Network operator within the iSEM for both Northern Ireland and the Republic of Ireland. Either run the .exe or .py file to execute the script.
 
 ### How to Run
-To download the data, simply run the exe file titled **"async_eirgrid_datadownload.exe"**, this .exe file can be found in the releases section on the github repository homepage. This will generate and save a CSV file with the historical Eirgrid iSEM grid data into a folder title `Downloaded_Data` in the same location the file is run from. 
+To download the data, simply run the exe file titled **"async_eirgrid_downloader.exe"**, this .exe file can be found in the releases section on the github repository homepage. This will generate and save a CSV file with the historical Eirgrid iSEM grid data into a folder title `Downloaded_Data` in the same location the file is run from. 
 
-This .exe file was compiled directly from the **"async_eirgrid_datadownload.py"** if you would like to see the specific functionality before running the program. I personally do not recommend downloading and running .exe files from sources you cannot verify yourself, but I have added the option to make life easier for those that may come to trust the projects I work on. Any questions regarding how the script operates don't hesitate to reach out.
+This .exe file was compiled directly from the **"async_eirgrid_downloader.py"** if you would like to see the specific functionality before running the program. I personally do not recommend downloading and running .exe files from sources you cannot verify yourself, but I have added the option to make life easier for those that may come to trust the projects I work on. Any questions regarding how the script operates don't hesitate to reach out.
 
 ### More Information
 Before running the program, ensure you meet the basic requirements to ensure its correct execution. If you are not using an IDE like Jupyter or VSCode, then remember to install Python 3.9 or higher first. Run the .py file in your terminal to start the process, assuming you meet the requirements listed below.
 
 There are two .py files that can be run directly to download the Eirgrid data instead of the .exe file:
-- **async_eirgrid_datadownload.py**: The primary script for data download.
-- **eirgrid_datadownload.py**: The initial implementation, slower due to sequential API calls.
+- **async_eirgrid_downloader.py**: The primary script for data download.
+- **eirgrid_downloader.py**: The initial implementation, slower due to sequential API calls.
 
 Most datasets contain information from January 1, 2014, onwards. However, SNSP data is only available after 2022 as it was not recorded before this. The time series format for the data ranges from 5 seconds to 30 minutes depending on the dataset obtained, however, most use a 15-minute format. More information on the data categories and formats can be found on the [Eirgrid Smart Dashboard](https://www.smartgriddashboard.com/#all).
 
