@@ -6,7 +6,6 @@ import pandas as pd
 import logging
 from datetime import datetime
 
-# Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.getLogger("requests").setLevel(logging.WARNING)  # Suppress detailed logs from 'requests' library
 

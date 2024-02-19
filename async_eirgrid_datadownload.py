@@ -10,7 +10,6 @@ from httpx import HTTPStatusError
 from tqdm.asyncio import tqdm
 from datetime import datetime
 
-# Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.getLogger("httpx").setLevel(logging.WARNING)
 

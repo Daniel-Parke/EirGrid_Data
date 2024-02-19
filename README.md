@@ -1,12 +1,12 @@
 # Eirgrid Data Downloader
 
 ## General Use Guidelines
-This script is designed to download all available data on the Eirgrid server presented on the [Eirgrid Smart Dashboard](https://www.smartgriddashboard.com/#all/demand). This information encompasses all grid variables recorded by the Network operator within the iSEM for both Northern Ireland and the Republic of Ireland.
+This script is designed to download all available data on the Eirgrid server presented on the [Eirgrid Smart Dashboard](https://www.smartgriddashboard.com/#all/demand). This information encompasses all grid variables recorded by the Network operator within the iSEM for both Northern Ireland and the Republic of Ireland. Either run the .exe or .py file to execute the script.
 
 ### How to Run
-To download the data, simply run the exe file titled **"async_eirgrid_datadownload.exe"**, this .exe file can be found in the releases section on the github repository homepage. This will generate and save a CSV file with the historical Eirgrid iSEM grid data into the downloaded folder. This process is repeated for each category and region set as variables within the .py file.
+To download the data, simply run the exe file titled **"async_eirgrid_datadownload.exe"**, this .exe file can be found in the releases section on the github repository homepage. This will generate and save a CSV file with the historical Eirgrid iSEM grid data into a folder title `Downloaded_Data` in the same location the file is run from. 
 
-This .exe file was compiled directly from the **"async_eirgrid_datadownload.py"** if you would like to see the specific functionality before running the program.
+This .exe file was compiled directly from the **"async_eirgrid_datadownload.py"** if you would like to see the specific functionality before running the program. I personally do not recommend downloading and running .exe files from sources you cannot verify yourself, but I have added the option to make life easier for those that may come to trust the projects I work on. Any questions regarding how the script operates don't hesitate to reach out.
 
 ### More Information
 Before running the program, ensure you meet the basic requirements to ensure its correct execution. If you are not using an IDE like Jupyter or VSCode, then remember to install Python 3.9 or higher first. Run the .py file in your terminal to start the process, assuming you meet the requirements listed below.
